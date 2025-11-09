@@ -1,7 +1,7 @@
 task: detect
 mode: train
 model: yolo11n.pt
-data: Weed-crop RGB dataset/Corn_augmented/corn_original.yaml
+data: Weed-crop RGB dataset/Corn_augmented/corn_augmented.yaml
 epochs: 100
 time: null
 patience: 20
@@ -12,8 +12,8 @@ save_period: -1
 cache: false
 device: '0'
 workers: 8
-project: runs/corn_original_dataset_yolov11n
-name: corn_yolov11n_original_dataset
+project: runs/corn_baseline_yolov11n
+name: training_results
 exist_ok: false
 pretrained: true
 optimizer: auto
@@ -103,4 +103,4 @@ auto_augment: randaugment
 erasing: 0.4
 cfg: null
 tracker: botsort.yaml
-save_dir: /home/jula/Repositories/CV/project/Crop-weed-detection/runs/corn_original_dataset_yolov11n/corn_yolov11n_original_dataset
+save_dir: /home/jula/Repositories/CV/project/Crop-weed-detection/runs/corn_baseline_yolov11n/training_results
